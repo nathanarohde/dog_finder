@@ -40,3 +40,9 @@ Needed:
 3) main section
 - JSON file for filters
 - JSON file for dogs
+
+Show everything from dogs.json (slider values full range at start) → Click on slider → states related to slider changed → states are used to filter through dogs.json
+
+side bar contains sliders
+main section displays dogs
+app tracks sliders
