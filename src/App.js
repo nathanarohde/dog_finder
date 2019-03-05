@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Profile from './Components/Profile/Profile.js';
-import Filter from './Components/Filter/Filter.js'
-import utility from './Utility/Utility.js'
+import Filter from './Components/Filter/Filter.js';
+import utility from './Utility/Utility.js';
 import dogs from './JSON/dogs.json';
 import filters from './JSON/filters.json';
 import './App.css';
@@ -20,7 +20,7 @@ class App extends Component {
 
   setIntialState() {
     for (let i=0; i < allFilters.length; i++){
-      this.setState({ [allFilters[i]] : "Default value"})
+      this.setState({ [allFilters[i]] : [ 1 , 5 ]})
     }
   }
 
@@ -35,21 +35,21 @@ class App extends Component {
     })
 
     return (
-      <div className="container App">
-        <header className="App-header">
-          <h1>Dog Finder</h1>
-        </header>
-        <div className="row">
-          <nav className="col-sm-3">
-            { filterList }
-          </nav>
-          <main className="col-sm-9">
-            <div className="row">
-              { profiles }
-            </div>
-          </main>
+        <div className="container App">
+          <header className="App-header">
+            <h1>Dog Finder</h1>
+          </header>
+          <div className="row">
+            <nav className="col-sm-3">
+              { filterList }
+            </nav>
+            <main className="col-sm-9">
+              <div className="row">
+                { profiles }
+              </div>
+            </main>
+          </div>
         </div>
-      </div>
     );
   }
 }
