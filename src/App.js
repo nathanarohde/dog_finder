@@ -5,6 +5,24 @@ import dogs from './JSON/dogs.json';
 import filters from './JSON/filters.json';
 import './App.css';
 
+// How is this added to the state.
+// What value is assigned to the created state?
+// https://reactjs.org/docs/react-component.html - costructor()
+let parentFilters = Object.keys(filters);
+let allFilters = [];
+
+function buildFilterList() {
+  let childFilters = [];
+  for (let i=0; i < parentFilters.length; i++){
+    childFilters = Object.keys(filters[parentFilters[i]]);
+    allFilters.push( parentFilters[i] );
+    allFilters.push( ...childFilters );
+  }
+};
+
+buildFilterList();
+console.log(allFilters);
+
 class App extends Component {
 
   render() {
@@ -12,7 +30,7 @@ class App extends Component {
       return <Profile key={ dog } breed={ dog } traits={ dogs[dog] }></Profile>
     })
 
-    let filterList = Object.keys(filters).map( function (filter) {
+    let filterList = parentFilters.map( function (filter) {
       return <Filter key={ filter } attribute={ filter } childAttributes={ Object.keys(filters[filter]) }></Filter>
     })
 
