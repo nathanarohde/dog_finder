@@ -1,0 +1,88 @@
+{
+  "Pug": {
+    "Adaptability" : {
+      "value" : 3,
+      "Adapts well to apartment living" : 5,
+      "Good for Novice Owners" : 5,
+      "Social Sensitivity" : 3,
+      "Tolerates Being Alone" : 1,
+      "Tolerates Cold Weather" : 2,
+      "Tolerates Hot Weather" : 1
+    },
+    "All Around Friendliness" : {
+      "value" : 4,
+      "Affectionate with Family" : 5,
+      "Child Tolerant" : 4,
+      "Dog Friendly" : 4,
+      "Stranger Tolerant" : 4
+    },
+    "Health & Grooming" : {
+      "value" : 3,
+      "Amount of Shedding" : 5,
+      "Tendency to Drool" : 1,
+      "Easy to Groom" : 5,
+      "General Health" : 1,
+      "Tendency for Weight Gain" : 5,
+      "Size" : 2
+    },
+    "Trainability" : {
+      "value" : 2,
+      "Easy to Train" : 3,
+      "Intelligence" : 2,
+      "Tendency to Use Mouth" : 2,
+      "Prey Drive" : 3,
+      "Tendency to Bark or Howl" : 2,
+      "Wanderlust Potential" : 2
+    },
+    "Exercise & Energy" : {
+      "value" : 4,
+      "Energy Level" : 3,
+      "Intensity" : 4,
+      "Exercise Needs" : 3,
+      "Potential for Playfulness" : 5
+    }
+  },
+  "Keeshound": {
+    "Adaptability" : {
+      "value" : 4,
+      "Adapts well to apartment living" : 4,
+      "Good for Novice Owners" : 4,
+      "Social Sensitivity" : 5,
+      "Tolerates Being Alone" : 1,
+      "Tolerates Cold Weather" : 5,
+      "Tolerates Hot Weather" : 3
+    },
+    "All Around Friendliness" : {
+      "value" : 5,
+      "Affectionate with Family" : 5,
+      "Child Tolerant" : 5,
+      "Dog Friendly" : 4,
+      "Stranger Tolerant" : 4
+    },
+    "Health & Grooming" : {
+      "value" : 3,
+      "Amount of Shedding" : 5,
+      "Tendency to Drool" : 1,
+      "Easy to Groom" : 3,
+      "General Health" : 3,
+      "Tendency for Weight Gain" : 4,
+      "Size" : 3
+    },
+    "Trainability" : {
+      "value" : 3,
+      "Easy to Train" : 4,
+      "Intelligence" : 4,
+      "Tendency to Use Mouth" : 3,
+      "Prey Drive" : 3,
+      "Tendency to Bark or Howl" : 4,
+      "Wanderlust Potential" : 2
+    },
+    "Exercise & Energy" : {
+      "value" : 4,
+      "Energy Level" : 4,
+      "Intensity" : 3,
+      "Exercise Needs" : 3,
+      "Potential for Playfulness" : 5
+    }
+  }
+}
