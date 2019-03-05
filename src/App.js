@@ -1,25 +1,14 @@
 import React, { Component } from 'react';
 import Profile from './Components/Profile/Profile.js';
 import Filter from './Components/Filter/Filter.js'
+import utility from './Utility/Utility.js'
 import dogs from './JSON/dogs.json';
 import filters from './JSON/filters.json';
 import './App.css';
 
+// this should be moved to a utily file
 let parentFilters = Object.keys(filters);
-let allFilters = [];
-
-function buildFilterList() {
-  let childFilters = [];
-  for (let i=0; i < parentFilters.length; i++){
-    childFilters = Object.keys(filters[parentFilters[i]]);
-    allFilters.push( parentFilters[i] );
-    //If child filters are not present will this break?
-    allFilters.push( ...childFilters );
-  }
-};
-
-buildFilterList();
-//console.log(allFilters);
+let allFilters = utility.buildFilterList();
 
 class App extends Component {
   state = {};
@@ -36,7 +25,6 @@ class App extends Component {
   }
 
   render() {
-    console.log(this.state);
 
     let profiles = Object.keys(dogs).map( function (dog) {
       return <Profile key={ dog } breed={ dog } traits={ dogs[dog] }></Profile>
