@@ -11,7 +11,12 @@ let parentFilters = Object.keys(filters);
 let allFilters = utility.buildFilterList();
 
 class App extends Component {
-  state = {};
+  constructor() {
+    super();
+    this.state = {}
+
+    // this.handleFilter = this.handleFilter.bind(this);
+  }
 
   componentDidMount() {
     //Builds initial state by iterating over the filter list
@@ -24,14 +29,20 @@ class App extends Component {
     }
   }
 
+  handleFilter(target, value) {
+    console.log('this is: ', target, ' ', value);
+  }
+
   render() {
 
-    let profiles = Object.keys(dogs).map( function (dog) {
+    let profiles = Object.keys(dogs).map( dog => {
       return <Profile key={ dog } breed={ dog } traits={ dogs[dog] }></Profile>
     })
 
-    let filterList = parentFilters.map( function (filter) {
-      return <Filter key={ filter } attribute={ filter } childAttributes={ Object.keys(filters[filter]) }></Filter>
+    let filterList = parentFilters.map( filter => {
+      return (
+        <Filter key={ filter } attribute={ filter } childAttributes={ Object.keys(filters[filter]) } filterClicked={ (target, value) => this.handleFilter(target, value) }></Filter>
+      );
     })
 
     return (
